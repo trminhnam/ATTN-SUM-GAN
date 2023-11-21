@@ -1,0 +1,138 @@
+{
+    "os": "Linux-5.15.0-83-generic-x86_64-with-glibc2.31",
+    "python": "3.11.4",
+    "heartbeatAt": "2023-11-21T17:14:36.004258",
+    "startedAt": "2023-11-21T17:14:34.667255",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--split_index",
+        "0",
+        "--video_type",
+        "tvsum",
+        "--hidden_size",
+        "256",
+        "--nhead",
+        "4",
+        "--num_layers",
+        "2",
+        "--lr",
+        "0.00002"
+    ],
+    "state": "running",
+    "program": "/home/minhnam/Desktop/code/Adversarial-Video-Summarization-via-attentive-pretrained-feature-extractor/model/train.py",
+    "codePath": "model/train.py",
+    "git": {
+        "remote": "git@github.com:trminhnam/Adversarial-Video-Summarization-via-attentive-pretrained-feature-extractor.git",
+        "commit": "608f5a9f9747bb972da0da571e995f725f5a320d"
+    },
+    "email": "tmnam20@apcs.fitus.edu.vn",
+    "root": "/home/minhnam/Desktop/code/Adversarial-Video-Summarization-via-attentive-pretrained-feature-extractor",
+    "host": "minhnam-Inspiron-16-7610",
+    "username": "minhnam",
+    "executable": "/home/minhnam/miniconda3/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 2424.9725625,
+        "min": 800.0,
+        "max": 4600.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 4299.561,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2300.0,
+            "min": 800.0,
+            "max": 4600.0
+        }
+    ],
+    "disk": {
+        "total": 384.39453887939453,
+        "used": 141.05489349365234
+    },
+    "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+            "memory_total": 4294967296
+        }
+    ],
+    "memory": {
+        "total": 31.087982177734375
+    }
+}
