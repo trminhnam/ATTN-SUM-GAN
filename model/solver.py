@@ -6,6 +6,7 @@ from torch.autograd import Variable
 import json
 from tqdm import tqdm, trange
 import os
+import time
 
 from layers import Summarizer, Discriminator
 from utils import TensorboardWriter
@@ -76,6 +77,10 @@ class Solver(object):
 
     def train(self):
         step = 0
+        with open(os.path.join(self.config.save_dir, "b. num_params.txt"), "w") as f:
+            f.write(f"{sum(p.numel() for p in self.model.parameters()):,}")
+
+        start_time = time.time()
         for epoch_i in trange(self.config.n_epochs, desc="Epoch", ncols=80):
             s_e_loss_history = []
             d_loss_history = []
@@ -234,6 +239,12 @@ class Solver(object):
             torch.save(self.model.state_dict(), ckpt_path)
 
             self.evaluate(epoch_i)
+
+        print("*" * 80)
+        print(f"Training time: {(time.time() - start_time) / 60:.3f} minutes")
+        with open(os.path.join(self.config.save_dir, "a. training_time.txt"), "w") as f:
+            f.write(f"{(time.time() - start_time) / 60:.3f} minutes")
+        print("*" * 80)
 
     def evaluate(self, epoch_i):
         self.model.eval()

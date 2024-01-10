@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+import os
 import argparse
 from pathlib import Path
 import pprint
@@ -35,6 +35,9 @@ class Config(object):
         self.save_dir = save_dir.joinpath(
             video_type, "models/split" + str(self.split_index)
         )
+        os.makedirs(self.log_dir, exist_ok=True)
+        os.makedirs(self.score_dir, exist_ok=True)
+        os.makedirs(self.save_dir, exist_ok=True)
 
     def __repr__(self):
         """Pretty-print configurations in alphabetical order"""
@@ -76,10 +79,16 @@ def get_config(parse=True, **optional_kwargs):
     parser.add_argument("--wandb_project", type=str, default="attentive-sum-gan")
     parser.add_argument("--wandb_run_prefix", type=str, default="")
 
+    # Directory
+    parser.add_argument("--save_dir", type=str, default="../output/attentive")
+
     if parse:
         kwargs = parser.parse_args()
     else:
         kwargs = parser.parse_known_args()[0]
+
+    global save_dir
+    save_dir = Path(kwargs.save_dir)
 
     # Namespace => Dictionary
     kwargs = vars(kwargs)

@@ -17,11 +17,11 @@ if __name__ == "__main__":
     test_loader = get_loader(test_config.mode, test_config.split_index)
     solver = AttentiveSolver(config, train_loader, test_loader)
 
-    wandb.init(
-        project=config.wandb_project,
-        config=config,
-        name=f"{config.wandb_run_prefix}{config.video_type}-split{config.split_index}",
-    )
+    # wandb.init(
+    #     project=config.wandb_project,
+    #     config=config,
+    #     name=f"{config.wandb_run_prefix}{config.video_type}-split{config.split_index}",
+    # )
 
     solver.build()
     # solver.evaluate(
